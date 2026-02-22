@@ -57,3 +57,38 @@ const phonebook = ["Alice", "Bob", "Charlie", "David"];
 const contactToSearch = "Charlie";
 const isContactFound = searchContact(phonebook, contactToSearch);
 console.log(`Is "${contactToSearch}" in the phonebook?`, isContactFound);
+
+// **************************** TASK 5 ********************************
+// Highest Score: Write a program to find the highest score in a list of student scores.
+
+function findHighestScore(scores) {
+    let highestScore = scores[0];
+    for (let score of scores) {
+        if (score > highestScore) {
+            highestScore = score;
+        }
+    }
+    return highestScore;
+}
+
+const studentScores = [85, 92, 78, 90, 88];
+const highestScore = findHighestScore(studentScores);
+console.log("Highest Score:", highestScore);
+
+
+// **************************** TASK 6 ********************************
+// Maximum Temperature: Write a program to find the maximum temperature from a list of daily temperatures.
+
+function findMaximumTemperature(temperatures) {
+    let maxTemperature = temperatures[0];
+    for (let temp of temperatures) {
+        if (temp > maxTemperature) {
+            maxTemperature = temp;
+        }
+    }
+    return maxTemperature;
+}
+
+const dailyTemperatures = [30, 28, 32, 31, 29];
+const maxTemperature = findMaximumTemperature(dailyTemperatures);
+console.log("Maximum Temperature:", maxTemperature);
