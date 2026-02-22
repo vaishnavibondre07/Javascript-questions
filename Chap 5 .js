@@ -107,3 +107,45 @@ function factorial(n) {
 const dailySales = [1, 2, 3, 4, 5, 6, 7];
 const factorials = dailySales.map(sale => factorial(sale));
 console.log("Factorials of Daily Sales:", factorials);
+
+
+// **************************** TASK 8 ********************************
+// Generate Fibonacci Sequence: Write a program to generate the Fibonacci sequence up to a certain number of terms and return them in a list.
+
+function generateFibonacci(n) {
+    const fibonacciSequence = [];
+    for (let i = 0; i < n; i++) {
+        if (i === 0) {
+            fibonacciSequence.push(0);
+        } else if (i === 1) {
+            fibonacciSequence.push(1);
+        } else {
+            const nextTerm = fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
+            fibonacciSequence.push(nextTerm);
+        }
+
+    }
+    return fibonacciSequence;
+}
+
+const numberOfTerms = 10;
+const fibonacciSequence = generateFibonacci(numberOfTerms);
+console.log("Fibonacci Sequence:", fibonacciSequence);
+
+
+
+// **************************** TASK 9 ********************************
+// Find Fibonacci Number in Budget: Write a program to find which Fibonacci number is closest to a given budget amount.
+
+function findClosestFibonacci(budget) {
+    let a = 0, b = 1;
+    while (b <= budget) {
+        const temp = a;
+        a = b;
+        b = temp + b;
+    }
+    return a;
+}           
+const budgetAmount = 100;
+const closestFibonacci = findClosestFibonacci(budgetAmount);
+console.log("Closest Fibonacci Number to Budget:", closestFibonacci);
