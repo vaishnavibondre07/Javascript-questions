@@ -149,3 +149,22 @@ function findClosestFibonacci(budget) {
 const budgetAmount = 100;
 const closestFibonacci = findClosestFibonacci(budgetAmount);
 console.log("Closest Fibonacci Number to Budget:", closestFibonacci);
+
+
+// **************************** TASK 10 ********************************
+// Check for duplicate Numbers: Write a program to check if there are any duplicate numbers in a list of orders.
+
+function hasDuplicateNumbers(orders) {
+    const uniqueOrders = new Set();
+    for (let order of orders) {
+        if (uniqueOrders.has(order)) {
+            return true; // Duplicate found
+        }
+        uniqueOrders.add(order);
+    }
+    return false; // No duplicates
+}
+
+const orderNumbers = [101, 102, 103, 104, 105, 101];
+const hasDuplicates = hasDuplicateNumbers(orderNumbers);
+console.log("Are there duplicate order numbers?", hasDuplicates);
