@@ -58,6 +58,7 @@ const contactToSearch = "Charlie";
 const isContactFound = searchContact(phonebook, contactToSearch);
 console.log(`Is "${contactToSearch}" in the phonebook?`, isContactFound);
 
+
 // **************************** TASK 5 ********************************
 // Highest Score: Write a program to find the highest score in a list of student scores.
 
@@ -92,3 +93,17 @@ function findMaximumTemperature(temperatures) {
 const dailyTemperatures = [30, 28, 32, 31, 29];
 const maxTemperature = findMaximumTemperature(dailyTemperatures);
 console.log("Maximum Temperature:", maxTemperature);
+
+
+// **************************** TASK 7 ********************************
+// Factorial of Daily sales: Write a program to copute the factoial of the sales made each day in weeek.
+
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+const dailySales = [1, 2, 3, 4, 5, 6, 7];
+const factorials = dailySales.map(sale => factorial(sale));
+console.log("Factorials of Daily Sales:", factorials);
