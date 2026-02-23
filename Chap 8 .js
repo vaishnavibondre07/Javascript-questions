@@ -36,3 +36,31 @@ if (bookIndex !== -1) {
 // *************************** TASK 2 *****************************
 // Library Management System: Write a program to determine if a book title "The Alchemist" is available in the library's sorted book list.
 
+function isBookAvailable(bookList, bookTitle) {
+    for (let book of bookList) {
+        if (book.toLowerCase() === bookTitle.toLowerCase()) {
+            return true; 
+        }
+    }   
+    return false;
+}
+const libraryBooks = [
+    "A Tale of Two Cities",
+    "Harry Potter",
+    "Moby Dick",
+    "Pride and Prejudice",
+    "The Great Gatsby", 
+    "The Lord of the Rings",
+    "The Alchemist",
+    "To Kill a Mockingbird",
+    "War and Peace",
+    "Wuthering Heights"
+];
+
+const bookTitleToCheck = "The Alchemist";
+const isAvailable = isBookAvailable(libraryBooks, bookTitleToCheck);
+if (isAvailable) {
+    console.log(`The book "${bookTitleToCheck}" is available in the library.`);
+} else {
+    console.log(`The book "${bookTitleToCheck}" is not available in the library.`);
+}   
