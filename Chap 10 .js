@@ -54,6 +54,7 @@ findRainfallExtremes(monthlyRainfall);
 
 
 
+
 // *************************** TASK 3 *****************************
 // Student Scores: Write a program to find the highest and lowest scores in a class of students.
 
