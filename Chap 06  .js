@@ -33,3 +33,25 @@ function calculateWeeklySales(dailySales) {
 const dailySales = [100, 150, 200, 250, 300, 350, 400];
 const weeklySales = calculateWeeklySales(dailySales);
 console.log(`Total weekly sales: $${weeklySales}`);
+
+
+
+
+// *************************** TASK 3 *****************************
+// Calculate Total Bill: Write a program to calculate the total bill amount foor a list of purchased items. Each item has a price and quantity.
+
+function calculateTotalBill(items) {
+    let totalBill = 0;
+    for (let item of items) {
+        totalBill += item.price * item.quantity;
+    }
+    return totalBill;
+}
+const purchasedItems = [
+    { price: 10, quantity: 2 },
+    { price: 20, quantity: 1 },
+    { price: 5, quantity: 4 }
+];
+const totalBill = calculateTotalBill(purchasedItems);
+console.log(`Total bill amount: $${totalBill}`);
+
